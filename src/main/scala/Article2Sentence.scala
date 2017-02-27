@@ -1,10 +1,9 @@
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 import com.databricks.spark.corenlp.functions._
 
 
-object Corenlp {
+object Article2Sentence {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder()
@@ -22,10 +21,13 @@ object Corenlp {
     val inputDF = spark.read.json(inputPath)
 
     val sentences = inputDF
-      .select('id, cleanxml('content).as('doc))
-      .select('id, explode(ssplit('doc)).as('sen))
+      .select('id, 'title, cleanxml('content).as('doc))
+      .select('id, 'title, explode(ssplit('doc)).as('sen))
 
-    sentences.write.csv(outputDataset)
+    val processed = sentences
+      .select(tokenize('sen).as('words), lemma('sen).as('lemma), ner('sen).as('nerTags), pos('sen).as('pos), sentiment('sen).as('sentiment))
+
+    processed.write.parquet(outputDataset)
 
   } //main
 }
