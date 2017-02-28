@@ -15,3 +15,8 @@ resolvers += "bintray-spark-packages" at "https://dl.bintray.com/spark-packages/
 
 // https://mvnrepository.com/artifact/databricks/spark-corenlp
 libraryDependencies += "databricks" % "spark-corenlp" % "0.2.0-s_2.11"
+
+libraryDependencies ++= Seq(
+  "edu.stanford.nlp" % "stanford-corenlp" % "3.6.0",
+  "edu.stanford.nlp" % "stanford-corenlp" % "3.6.0" classifier "models"
+)

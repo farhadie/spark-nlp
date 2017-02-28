@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="corenlp" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="spark-nlp" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/../../target/scala-2.11/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.11/test-classes" />
@@ -18,27 +18,11 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.11/resource_managed/test" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/resolution-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.3.03:jar" level="project" />
-    <orderEntry type="library" name="SBT: xerces:xercesImpl:2.8.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: xalan:xalan:2.7.0:jar" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="SBT: org.slf4j:slf4j-api:1.7.12:jar" level="project" />
-    <orderEntry type="library" name="SBT: joda-time:joda-time:2.9:jar" level="project" />
-    <orderEntry type="library" name="SBT: javax.xml.bind:jaxb-api:2.2.7:jar" level="project" />
-    <orderEntry type="library" name="SBT: javax.json:javax.json-api:1.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: edu.stanford.nlp:stanford-corenlp:3.6.0:models:jar" level="project" />
-    <orderEntry type="library" name="SBT: edu.stanford.nlp:stanford-corenlp:3.6.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: de.jollyday:jollyday:0.4.7:jar" level="project" />
-    <orderEntry type="library" name="SBT: databricks:spark-corenlp:0.2.0-s_2.11:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.io7m.xom:xom:1.2.10:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.googlecode.efficient-java-matrix-library:ejml:0.23:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.google.protobuf:protobuf-java:2.6.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: aopalliance:aopalliance:1.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: edu.stanford.nlp:stanford-corenlp:3.6.0:models:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.clearspring.analytics:stream:2.7.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.esotericsoftware:kryo-shaded:3.0.3:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.esotericsoftware:minlog:1.3.0:jar" level="project" />
@@ -50,6 +34,9 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.code.findbugs:jsr305:1.3.9:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.guava:guava:14.0.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.inject:guice:3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.google.protobuf:protobuf-java:2.6.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.googlecode.efficient-java-matrix-library:ejml:0.23:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.io7m.xom:xom:1.2.10:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.ning:compress-lzf:1.0.3:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.thoughtworks.paranamer:paranamer:2.6:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: com.twitter:chill-java:0.8.0:jar" level="project" />
@@ -66,6 +53,9 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: commons-io:commons-io:2.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: commons-lang:commons-lang:2.5:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: commons-net:commons-net:2.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: databricks:spark-corenlp:0.2.0-s_2.11:jar" level="project" />
+    <orderEntry type="library" name="SBT: de.jollyday:jollyday:0.4.7:jar" level="project" />
+    <orderEntry type="library" name="SBT: edu.stanford.nlp:stanford-corenlp:3.6.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: io.dropwizard.metrics:metrics-core:3.1.2:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: io.dropwizard.metrics:metrics-graphite:3.1.2:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: io.dropwizard.metrics:metrics-json:3.1.2:jar" level="project" />
@@ -74,9 +64,12 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: io.netty:netty-all:4.0.42.Final:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: javax.annotation:javax.annotation-api:1.2:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: javax.inject:javax.inject:1:jar" level="project" />
+    <orderEntry type="library" name="SBT: javax.json:javax.json-api:1.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: javax.servlet:javax.servlet-api:3.1.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: javax.validation:validation-api:1.1.0.Final:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: javax.ws.rs:javax.ws.rs-api:2.0.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: javax.xml.bind:jaxb-api:2.2.7:jar" level="project" />
+    <orderEntry type="library" name="SBT: joda-time:joda-time:2.9:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: log4j:log4j:1.2.17:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: net.java.dev.jets3t:jets3t:0.7.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: net.jpountz.lz4:lz4:1.3.0:jar" level="project" />
@@ -153,6 +146,7 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.objenesis:objenesis:2.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.roaringbitmap:RoaringBitmap:0.5.11:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.scala-lang:scala-compiler:2.11.8:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.8:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.scala-lang:scala-reflect:2.11.8:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.scala-lang:scalap:2.11.8:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar" level="project" />
@@ -160,6 +154,7 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.scalatest:scalatest_2.11:2.2.6:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.slf4j:jcl-over-slf4j:1.7.16:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.slf4j:jul-to-slf4j:1.7.16:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.slf4j:slf4j-api:1.7.12:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.slf4j:slf4j-api:1.7.16:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.slf4j:slf4j-log4j12:1.7.16:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.sonatype.sisu.inject:cglib:2.2.1-v20090111:jar" level="project" />
@@ -167,6 +162,9 @@
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.tukaani:xz:1.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: org.xerial.snappy:snappy-java:1.1.2.6:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: oro:oro:2.0.8:jar" level="project" />
+    <orderEntry type="library" name="SBT: xalan:xalan:2.7.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: xerces:xercesImpl:2.8.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.3.03:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="SBT: xmlenc:xmlenc:0.52:jar" level="project" />
   </component>
 </module>
