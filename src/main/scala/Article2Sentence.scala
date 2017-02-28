@@ -23,11 +23,13 @@ object Article2Sentence {
     val sentences = inputDF
       .select('id, 'title, cleanxml('content).as('doc))
       .select('id, 'title, explode(ssplit('doc)).as('sen))
+      .cache
 
     val processed = sentences
       .select(tokenize('sen).as('words), lemma('sen).as('lemma), ner('sen).as('nerTags), pos('sen).as('pos), sentiment('sen).as('sentiment))
+      .cache
 
-    processed.write.parquet(outputDataset)
+    processed.show()
 
   } //main
 }
