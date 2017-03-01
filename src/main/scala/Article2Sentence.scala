@@ -1,4 +1,4 @@
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.sql.functions._
 import com.databricks.spark.corenlp.functions._
 
@@ -25,11 +25,11 @@ object Article2Sentence {
       .select('id, 'title, explode(ssplit('doc)).as('sen))
       .cache
 
-    val processed = sentences
+    /*val processed = sentences
       .select(tokenize('sen).as('words), lemma('sen).as('lemma), ner('sen).as('nerTags), pos('sen).as('pos), sentiment('sen).as('sentiment))
       .cache
-
-    processed.write.parquet(outputDataset)
+    */
+    sentences.write.json(outputDataset)
 
   } //main
 }
