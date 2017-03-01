@@ -21,8 +21,7 @@ object Article2Sentence {
     val inputDF = spark.read.json(inputPath)
 
     val sentences = inputDF
-      .select('id, 'title, cleanxml('content).as('doc))
-      .select('id, 'title, explode(ssplit('doc)).as('sen))
+      .select('id, 'title, explode(ssplit('content)).as('sen))
       .cache
 
     /*val processed = sentences
