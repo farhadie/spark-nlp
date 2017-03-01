@@ -29,7 +29,7 @@ object Article2Sentence {
       .select(tokenize('sen).as('words), lemma('sen).as('lemma), ner('sen).as('nerTags), pos('sen).as('pos), sentiment('sen).as('sentiment))
       .cache
 
-    processed.show()
+    processed.write.parquet(outputDataset)
 
   } //main
 }
