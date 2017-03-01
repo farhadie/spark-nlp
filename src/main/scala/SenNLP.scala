@@ -24,7 +24,7 @@ object SenNLP {
       .select('sen, tokenize('sen).as('words), lemma('sen).as('lemma), pos('sen).as('pos), ner('sen).as('nerTags))
       .cache
 
-    processed.write.json(outputDataset)
+    processed.write.parquet(outputDataset)
 
   } //main
 

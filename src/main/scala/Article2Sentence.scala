@@ -28,7 +28,7 @@ object Article2Sentence {
       .select(tokenize('sen).as('words), lemma('sen).as('lemma), ner('sen).as('nerTags), pos('sen).as('pos), sentiment('sen).as('sentiment))
       .cache
     */
-    sentences.write.json(outputDataset)
+    sentences.write.parquet(outputDataset)
 
   } //main
 }
