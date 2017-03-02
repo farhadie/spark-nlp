@@ -18,7 +18,7 @@ object SenNLP {
     val inputPath = args(0)
     val outputDataset = args(1)
 
-    val inputDF = spark.read.json(inputPath)
+    val inputDF = spark.read.parquet(inputPath)
 
     val processed = inputDF
       .select('sen, tokenize('sen).as('words), lemma('sen).as('lemma), pos('sen).as('pos), ner('sen).as('nerTags))
