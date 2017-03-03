@@ -1,9 +1,11 @@
-import org.apache.spark.sql.{SaveMode, SparkSession}
-import org.apache.spark.sql.functions._
 import com.databricks.spark.corenlp.functions._
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.explode
 
-
-object Article2Sentence {
+/**
+  * Created by sam on 3/3/17.
+  */
+object Pipline {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder()
@@ -24,7 +26,11 @@ object Article2Sentence {
       .select('id, 'title, explode(ssplit('content)).as('sen))
       .cache
 
-    sentences.write.parquet(outputDataset)
+    val processed = sentences
+      .select(tokenize('sen).as('words), lemma('sen).as('lemma), ner('sen).as('nerTags), pos('sen).as('pos))
+      .cache
+
+    processed.write.parquet(outputDataset)
 
   } //main
 }
