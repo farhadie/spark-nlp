@@ -5,7 +5,7 @@ import org.apache.spark.sql.functions.explode
 /**
   * Created by sam on 3/3/17.
   */
-object Pipline {
+object Pipeline {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder()
